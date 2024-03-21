@@ -1,12 +1,18 @@
+//Solving an equation of the form AX = B, where A is a 2x2 matrix, and B is a 2x1 matrix by
+//1. Calculating determinant 
+//2. Creating an adjoint matrix
+//3. Creating an inverse matrix 
+//4. Multiplying matrices
 #include <iostream>
 #include <iomanip>
-
 using namespace std;
 
+// defining constants 
 const int MATRIX_ROWS = 2;
 const int MATRIX_COLS = 2;
 const int RESULT_COLS = 1;
 
+// function signatures
 float calculateDeterminant(float [][MATRIX_COLS]);
 float** computeAdjoint(float [][MATRIX_COLS]);
 float** computeInverse(float [][MATRIX_COLS]);
@@ -28,6 +34,7 @@ int main() {
 
     cout << "Enter matrix A (2x2):\n";
     input_2_2(matrixA);
+
     cout << "Enter matrix B (2x1):\n";
     input_2_1(matrixB);
 
@@ -36,7 +43,7 @@ int main() {
     return 0;
 }
 
-
+// use iomanip library to format matrix, otherwise negative/floating point numbers take additonal space and skew the formatting
 void print_2_2(float matrix[][MATRIX_COLS]) {
 
     cout << fixed << setprecision(1);
@@ -147,6 +154,7 @@ float** computeInverse(float matrix[][MATRIX_COLS]) {
     return inverse;
 }
 
+// deallocating memory from the heap after use
 void deallocate(float** matrix){
 
     for (int i=0;i<MATRIX_ROWS;i++)

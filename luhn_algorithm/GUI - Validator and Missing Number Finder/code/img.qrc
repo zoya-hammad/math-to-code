@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/img"/>
+    <qresource prefix="/im">
+        <file>main_icon.jpg</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>lock.jpg</file>
+        <file>missingp.jpg</file>
+        <file>validate.jpg</file>
+        <file>MissingNum.jpg</file>
+        <file>gh.jpg</file>
+        <file>problem-solving.png</file>
+        <file>validation.png</file>
+        <file>jellyfish.png</file>
+        <file>l.png</file>
+    </qresource>
+</RCC>
